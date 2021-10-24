@@ -388,7 +388,7 @@ footer {
     padding: 1em;
   }
   .post-list {
-    margin: 0;
+    margin: 1em;
   }
   .box {
     grid-template-columns: 1fr;
@@ -420,9 +420,10 @@ footer {
 }
 @media only screen and (max-width: 480px) {
   .post-list {
-    grid-gap: 1em 1em;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
   }
-  .box__image a div {
+  .box__image .real a div {
     height: auto;
     width: 100%;
   }
