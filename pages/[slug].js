@@ -1,11 +1,16 @@
+import Head from "next/head";
 import Image from "next/image";
 import Category from "@/components/Category";
 import { getSlugs, getBySlug } from "@/libs/markdown";
+import { siteName } from "@/libs/config";
 
 export default function Detail({ post }) {
   if (!post) return null;
   return (
     <>
+      <Head>
+        <title>{siteName}|{post.title} </title>
+      </Head>
       <div className="detail__image">
         <div className="back"></div>
         <div className="real">

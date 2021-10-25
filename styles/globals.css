@@ -197,7 +197,7 @@ header {
 }
 
 .box__content .excerpt {
-  font-size: 0.9em;
+  font-size: 0.95em;
   opacity: 0.8;
   font-weight: 200;
   line-height: 1.6;
@@ -389,6 +389,9 @@ footer {
  * 
 */
 @media only screen and (max-width: 920px) {
+  body {
+    font-size: 95%;
+  }
   .container {
     padding: 0 0.5em;
   }
@@ -408,6 +411,7 @@ footer {
   }
   .detail {
     margin: 1em 0em;
+    padding: 1em;
   }
   .detail__image .back,
   .detail__image .real {
@@ -423,7 +427,7 @@ footer {
 }
 @media only screen and (max-width: 540px) {
   body {
-    font-size: 80%;
+    font-size: 85%;
   }
 }
 @media only screen and (max-width: 480px) {

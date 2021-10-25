@@ -1,11 +1,15 @@
+import Head from "next/head";
 import Box from "@/components/Box";
 import Pagination from "@/components/Pagination";
 import { getCategories, getByCategory } from "@/libs/markdown";
-import { perPage } from "@/libs/config";
+import { siteName,perPage } from "@/libs/config";
 
 export default function Category({ posts, category, totalPages, currentPage }) {
   return (
     <>
+     <Head>
+        <title>{siteName}|{category} </title>
+      </Head>
       <a className="identation">#{category}</a>
       <section className="post-list">
         {posts.map((post, i) => (
