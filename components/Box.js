@@ -6,7 +6,8 @@ export default function Box({ slug, coverImage, title, categories, excerpt }) {
   return (
     <div className="box">
       <div className="box__image">
-        <div className="back" />
+        <div className="back1" />
+        <div className="back2" />
         <div className="real">
           <Link href={"/" + slug} passHref>
             <a>

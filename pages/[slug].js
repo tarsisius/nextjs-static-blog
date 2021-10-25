@@ -22,7 +22,7 @@ export default function Detail({ post }) {
           />
         </div>
       </div>
-      <section className="detail">
+      <main className="detail">
         <h1 className="detail__title">{post.title}</h1>
         <Category categories={post.categories} />
         <article className="detail__article">
@@ -31,7 +31,7 @@ export default function Detail({ post }) {
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>
-      </section>
+      </main>
     </>
   );
 }

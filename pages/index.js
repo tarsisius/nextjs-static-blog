@@ -10,11 +10,11 @@ export default function Page({ posts, totalPages, currentPage }) {
       <Head>
         <title>{siteName}</title>
       </Head>
-      <section className="post-list">
+      <main className="post-list">
         {posts.map((post, i) => (
           <Box key={i} {...post} />
         ))}
-      </section>
+      </main>
       <Pagination currentPage={currentPage} totalPages={totalPages} />
     </>
   );

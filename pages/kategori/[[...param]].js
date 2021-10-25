@@ -11,11 +11,11 @@ export default function Category({ posts, category, totalPages, currentPage }) {
         <title>{siteName} | {category} </title>
       </Head>
       <a className="identation">#{category}</a>
-      <section className="post-list">
+      <main className="post-list">
         {posts.map((post, i) => (
           <Box key={i} {...post} />
         ))}
-      </section>
+      </main>
 
       <Pagination currentPage={currentPage} totalPages={totalPages} category={category} />
     </>
