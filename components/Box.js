@@ -20,8 +20,8 @@ export default function Box({ slug, coverImage, title, categories, excerpt }) {
           </Link>
         </div>
       </div>
-      <Category categories={categories} />
       <div className="box__content">
+        <Category categories={categories} />
         <Link href={"/" + slug} passHref>
           <a>
             <h3 className="heading">{title}</h3>
