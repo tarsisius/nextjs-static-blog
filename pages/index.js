@@ -3,7 +3,6 @@ import Box from "@/components/Box";
 import Pagination from "@/components/Pagination";
 import { getPosts } from "@/libs/markdown";
 import { siteName, perPage } from "@/libs/config";
-// import Navigation from "@/components/Navigation";
 
 export default function Page({ posts, totalPages, currentPage }) {
   return (
@@ -11,7 +10,6 @@ export default function Page({ posts, totalPages, currentPage }) {
       <Head>
         <title>{siteName}</title>
       </Head>
-      {/* <Navigation /> */}
       <section className="post-list">
         {posts.map((post, i) => (
           <Box key={i} {...post} />

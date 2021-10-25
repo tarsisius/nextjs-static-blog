@@ -9,7 +9,7 @@ export default function Detail({ post }) {
   return (
     <>
       <Head>
-        <title>{siteName}|{post.title} </title>
+        <title>{siteName} | {post.title} </title>
       </Head>
       <div className="detail__image">
         <div className="back"></div>
