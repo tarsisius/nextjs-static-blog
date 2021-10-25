@@ -170,6 +170,7 @@ header {
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+  background: #333;
 }
 
 .box__content {
