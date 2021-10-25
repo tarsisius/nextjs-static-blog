@@ -20,7 +20,7 @@ export default function Box({ slug, coverImage, title, categories, excerpt }) {
           </Link>
         </div>
       </div>
-        <Category categories={categories} />
+      <Category categories={categories} />
       <div className="box__content">
         <Link href={"/" + slug} passHref>
           <a>
