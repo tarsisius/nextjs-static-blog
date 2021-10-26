@@ -28,7 +28,7 @@ export default function Box({ slug, coverImage, title, categories, excerpt }) {
             <h3 className="heading">{title}</h3>
           </a>
         </Link>
-        {/* <span className="excerpt">{excerpt}</span> */}
+        <span className="excerpt">{excerpt}</span>
       </div>
     </div>
   );

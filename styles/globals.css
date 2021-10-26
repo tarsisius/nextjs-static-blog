@@ -100,17 +100,20 @@ h4 {
 */
 
 header {
-  margin: 2em 0 4em 0;
+  margin: 0 0 4em 0;
   width: 100%;
 }
 .header__logo {
-  font-size: 3em;
-  padding-bottom: 0.5em;
+  display: flex;
+  font-size: 2em;
   font-weight: 700;
-  border-bottom: 1px solid rgba(228, 228, 231, 1);
+  color: #ffff;
 }
-.header__logo a {
+.header__logo .logo {
+  padding: .5em 1em;
   cursor: pointer;
+  background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
+  border-radius: 0 0 0.5em 0.5em;
 }
 .header__desc {
   margin: 1em 0;
@@ -214,6 +217,7 @@ header {
 }
 
 .box__content .excerpt {
+  padding-top: 0.5em;
   font-size: 0.95em;
   opacity: 0.8;
   line-height: 1.6;
@@ -429,9 +433,8 @@ footer {
   }
 }
 
-@media only screen and (max-width: 280px) {
+@media only screen and (max-width: 360px) {
   .box__image .real a div {
-    width: 100%;
-    height: 10em;
+    height: 12em;
   }
 }
