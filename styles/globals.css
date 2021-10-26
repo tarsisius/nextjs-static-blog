@@ -154,7 +154,7 @@ header {
 }
 .box:hover > .box__image .back1,
 .box:hover > .box__image .back2 {
-  box-shadow: 0px 0px 70px 10px rgba(163,230,53,0.75);
+  box-shadow: 0px 0px 70px 10px rgba(163, 230, 53, 0.75);
 }
 .box .category__component {
   margin: 1em 0 0.5em 0;
@@ -317,7 +317,7 @@ header {
 .detail__image .back1 {
   height: 2em;
   width: 6em;
-  top: -1em;
+  top: -0.5em;
   left: 1em;
   bottom: 0;
   position: absolute;
@@ -328,7 +328,7 @@ header {
   height: 2em;
   width: 6em;
   right: 1em;
-  bottom: -1em;
+  bottom: -0.5em;
   position: absolute;
   background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
   border-radius: 0.25em;
@@ -419,7 +419,7 @@ footer {
     grid-gap: 2em;
     grid-template-columns: 1fr;
   }
-  
+
   .box__image .real a div {
     width: 100%;
     height: 15em;
