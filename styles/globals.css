@@ -68,29 +68,29 @@ button {
 }
 h1 {
   font-size: 2em;
-  
-  background: linear-gradient( to right,#22c55e,#a3e635);
+
+  background: linear-gradient(to right, #22c55e, #a3e635);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 h2 {
   font-size: 1.5em;
-  
-  background: linear-gradient( to right,#22c55e,#a3e635);
+
+  background: linear-gradient(to right, #22c55e, #a3e635);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 h3 {
   font-size: 1.17em;
-  
-  background: linear-gradient( to right,#22c55e,#a3e635);
+
+  background: linear-gradient(to right, #22c55e, #a3e635);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 h4 {
   font-size: 1em;
-  
-  background: linear-gradient( to right,#22c55e,#a3e635);
+
+  background: linear-gradient(to right, #22c55e, #a3e635);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -129,7 +129,7 @@ header {
 .header__logo .logo {
   padding: 0.5em 1em;
   cursor: pointer;
-  background: linear-gradient( to right,#22c55e,#a3e635);
+  background: linear-gradient(to right, #22c55e, #a3e635);
   border-radius: 0 0 0.5em 0.5em;
 }
 
@@ -166,7 +166,7 @@ header {
   position: relative;
   overflow: hidden;
   color: var(--text);
-  padding: 1em;
+  padding: 0 1em;
   height: 100%;
 }
 
@@ -174,6 +174,7 @@ header {
   transform: translateY(-2px);
 }
 .box .category__component {
+  margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
@@ -187,7 +188,7 @@ header {
   text-overflow: ellipsis;
   font-weight: 600;
 
-  background: linear-gradient( to right,#22c55e,#a3e635);
+  background: linear-gradient(to right, #22c55e, #a3e635);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
