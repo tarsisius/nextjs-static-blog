@@ -12,7 +12,8 @@ export default function Detail({ post }) {
         <title>{siteName} | {post.title} </title>
       </Head>
       <div className="detail__image">
-        <div className="back"></div>
+        <div className="back1"/>
+        <div className="back2"/>
         <div className="real">
           <Image
             src={post.coverImage}

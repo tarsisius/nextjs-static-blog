@@ -166,8 +166,6 @@ header {
   height: 2em;
   width: 4em;
   top: -0.5em;
-  right: 0;
-  bottom: 0;
   left: 0.25em;
   position: absolute;
   background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
@@ -313,18 +311,25 @@ header {
 
 .detail__image {
   width: 100%;
-  padding: 0 1em;
   margin-bottom: 2em;
   position: relative;
 }
-.detail__image .back {
-  top: 0;
-  right: 1em;
-  bottom: 0;
+.detail__image .back1 {
+  height: 2em;
+  width: 6em;
+  top: -1em;
   left: 1em;
+  bottom: 0;
   position: absolute;
-  transform: translateX(0) translateY(0) rotate(4deg) skewX(0) skewY(0)
-    scaleX(1) scaleY(1);
+  background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
+  border-radius: 0.25em;
+}
+.detail__image .back2 {
+  height: 2em;
+  width: 6em;
+  right: 1em;
+  bottom: -1em;
+  position: absolute;
   background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
   border-radius: 0.25em;
 }
@@ -339,6 +344,7 @@ header {
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+  background: #333;
 }
 .detail__article .inner {
   color: var(--text);
@@ -370,7 +376,7 @@ footer {
 */
 @media only screen and (max-width: 920px) {
   body {
-    font-size: 95%;
+    font-size: 98%;
   }
   .container {
     padding: 0 0.5em;
@@ -394,36 +400,38 @@ footer {
     margin: 1em 0em;
     padding: 1em;
   }
-  /* .detail__image .back,
-  .detail__image .real {
-    right: 1em;
-    left: 1em;
-  } */
 }
-
-@media only screen and (max-width: 680px) {
-  body {
-    font-size: 90%;
+@media only screen and (max-width: 768px) {
+  .post-list {
+    grid-gap: 2em;
   }
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 680px) {
   body {
-    font-size: 85%;
+    font-size: 95%;
   }
 }
 @media only screen and (max-width: 480px) {
+  body {
+    font-size: 93%;
+  }
   .post-list {
     grid-gap: 2em;
     grid-template-columns: 1fr;
   }
-  .box__image .back {
-    transform: translateX(0) translateY(0) rotate(4deg) skewX(0) skewY(0)
-      scaleX(1) scaleY(1);
-  }
+  
   .box__image .real a div {
     width: 100%;
+    height: 15em;
   }
   .number {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .box__image .real a div {
+    width: 100%;
+    height: 10em;
   }
 }
