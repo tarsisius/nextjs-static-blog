@@ -174,7 +174,7 @@ header {
   position: unset !important;
   aspect-ratio: 4.5/3;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
