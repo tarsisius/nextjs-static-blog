@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=Inconsolata&display=swap");
 
 :root {
-  --text: #4a4a4abe;
-  --primary: #22c55e;
-  --background: #fff;
-  --box-background: #fff;
+  --text: #4a4a4a;
+  --primary: rgb(29, 184, 29);
+  --background: #ffff;
   --button-background: rgba(0, 0, 0, 0.04);
   --button-background-hover: rgba(0, 0, 0, 0.1);
 }
@@ -66,13 +65,17 @@ button {
   touch-action: manipulation;
   cursor: pointer;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #22c55e;
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.17em;
+}
+h4 {
+  font-size: 1em;
 }
 
 .identation {
@@ -107,10 +110,14 @@ header {
   color: #ffff;
 }
 .header__logo .logo {
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   cursor: pointer;
-  background: linear-gradient(to right, #22c55e, #a3e635);
+  background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
   border-radius: 0 0 0.5em 0.5em;
+}
+.header__desc {
+  margin: 1em 0;
+  font-size: 1.25em;
 }
 
 /*
@@ -124,7 +131,7 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
   align-items: start;
   justify-items: center;
-  grid-gap: 3em;
+  grid-gap: 4em;
   padding: 2em 0;
 }
 
@@ -136,82 +143,91 @@ header {
 
 .box {
   position: relative;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   transition: all 0.3s ease;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 0.75em;
-  background-color: var(--box-background);
-  position: relative;
-  overflow: hidden;
-  color: var(--text);
-  padding: 1em;
-  /* height: 100%; */
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1em;
+  z-index: 0;
 }
 
 .box:hover {
   transform: translateY(-2px);
 }
-
-.box a .heading {
-  cursor: pointer;
-  line-height: 1.6;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 600;
+.box:hover > .box__image .back1,
+.box:hover > .box__image .back2 {
+  box-shadow: 0px 0px 70px 10px rgba(163, 230, 53, 0.75);
 }
-.box .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+.box .category__component {
+  margin: 1em 0 0.5em 0;
 }
-.content .changable {
+.box__image {
   position: relative;
 }
-.changable .category__component {
+.box__image .back1 {
+  height: 2em;
+  width: 4em;
+  top: -0.5em;
+  left: 0.25em;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-  padding: 1em 0;
-  background: var(--box-background);
+  background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
+  border-radius: 0.25em;
 }
-.changable .excerpt {
-  padding-top: 0.5em;
+.box__image .back2 {
+  height: 4em;
+  width: 2em;
+  right: -0.5em;
+  bottom: 0.25em;
+  position: absolute;
+  background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
+  border-radius: 0.25em;
+}
+
+.box__image .real div {
+  border-radius: 0.25em;
+  overflow: hidden;
+  position: unset !important;
+  height: 10em;
+  width: 100%;
+}
+
+.box__image .real div .image {
+  object-fit: cover;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  background: #333;
+}
+
+.box__content {
+  color: var(--text);
+  padding: 0 0.5em;
+  height: 100%;
+}
+.box__content a .heading {
+  cursor: pointer;
   line-height: 1.6;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  margin-bottom: 1em;
+  font-weight: 600;
 }
-.content .icon {
-  display: flex;
+
+.box__content .excerpt {
+  padding-top: 0.5em;
+  font-size: 0.95em;
+  opacity: 0.8;
+  line-height: 1.6;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
 }
-.icon .icon__child {
-  background: linear-gradient(to right, #22c55e, #a3e635);
-  padding: 0.25em;
-  border-radius: 0.25em;
-  margin-right: 0.5em;
-  height: 1.5em;
-  width: 1.5em;
-  display: flex;
-  cursor: pointer;
-}
-.icon .icon__child:hover > img {
-  transform: rotate(360deg);
-  transition: transform 0.9s ease-in-out;
-}
-.box .content .date {
+.box__content .date {
   line-height: 1.6;
   overflow: hidden;
 }
@@ -226,18 +242,16 @@ header {
   padding: 1em;
 }
 .category__component {
+  display: flex;
   margin-bottom: 1em;
 }
 .category {
+  display: inline-flex;
   line-height: 1.4;
-  font-weight: 400;
+  font-weight: 600;
   margin-right: 0.5em;
-  font-size: 0.85em;
-  color: var(--background);
+  color: var(--primary);
   cursor: pointer;
-  background: linear-gradient(to right, #22c55e, #a3e635);
-  padding: 0.25em;
-  border-radius: 0.25em;
 }
 
 /*
@@ -292,15 +306,50 @@ header {
 
 .detail {
   padding: 2em;
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 0.75em;
-  background-color: var(--box-background);
+  margin: 1em -1em;
 }
 .detail__title {
   font-size: 2em;
   margin-bottom: 1em;
 }
 
+.detail__image {
+  width: 100%;
+  margin-bottom: 2em;
+  position: relative;
+}
+.detail__image .back1 {
+  height: 2em;
+  width: 6em;
+  top: -0.5em;
+  left: 1em;
+  bottom: 0;
+  position: absolute;
+  background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
+  border-radius: 0.25em;
+}
+.detail__image .back2 {
+  height: 2em;
+  width: 6em;
+  right: 1em;
+  bottom: -0.5em;
+  position: absolute;
+  background-image: linear-gradient(90deg, rgb(163, 230, 53), rgb(34, 197, 94));
+  border-radius: 0.25em;
+}
+.detail__image .real div {
+  position: unset !important;
+}
+
+.detail__image .real div .image {
+  border-radius: 0.25em;
+  overflow: hidden;
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  background: #333;
+}
 .detail__article .inner {
   color: var(--text);
   line-height: 2;
@@ -334,17 +383,22 @@ footer {
     font-size: 98%;
   }
   .container {
-    padding: 0 1em;
+    padding: 0 0.5em;
   }
   .header__inner {
     padding: 1em;
   }
   .post-list {
     padding-top: 2em;
+    margin: 0 1em;
   }
   .box {
     grid-template-columns: 1fr;
     margin-bottom: 2em;
+  }
+
+  .box__content {
+    margin: 0;
   }
   .detail {
     margin: 1em 0em;
@@ -370,7 +424,17 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .box__image .real a div {
+    width: 100%;
+    height: 15em;
+  }
   .number {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .box__image .real a div {
+    height: 12em;
   }
 }

@@ -1,27 +1,32 @@
-import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import Category from "@/components/Category";
 
-export default function Box({ slug, title, categories, excerpt }) {
-  const [cat, showCat] = useState(false);
-
+export default function Box({ slug, coverImage, title, categories, excerpt }) {
   return (
     <div className="box">
-      <Link href={"/" + slug} passHref>
-        <a>
-          <h3 className="heading">{title}</h3>
-        </a>
-      </Link>
-      <div className="content">
-        <div className="changable">
-          {cat && <Category categories={categories} />}
-          <p className="excerpt">{excerpt}</p>
-        </div>
-        <div className="icon">
-          <span className="icon__child" onClick={() => showCat((e) => !e)}>
-            <img className="inner" src="/assets/svg/hash.svg" alt="Kategori" />
-          </span>
-        </div>
+      <div className="box__image">
+        <div className="back1" />
+        <div className="back2" />
+        <Link href={"/" + slug} passHref>
+          <div className="real">
+            <Image
+              src={coverImage}
+              layout="fill"
+              className="image"
+              alt={coverImage}
+            />
+          </div>
+        </Link>
+      </div>
+      <div className="box__content">
+        <Category categories={categories} />
+        <Link href={"/" + slug} passHref>
+          <a>
+            <h3 className="heading">{title}</h3>
+          </a>
+        </Link>
+        <span className="excerpt">{excerpt}</span>
       </div>
     </div>
   );
