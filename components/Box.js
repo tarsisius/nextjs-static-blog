@@ -5,11 +5,9 @@ import Category from "@/components/Category";
 export default function Box({ slug, coverImage, title, categories, excerpt }) {
   return (
     <div className="box">
-      <div className="box__image">
-        <div className="back1" />
-        <div className="back2" />
+      <div className="box__card">
         <Link href={"/" + slug} passHref>
-          <div className="real">
+          <div className="card__image">
             <Image
               src={coverImage}
               layout="fill"
@@ -18,16 +16,17 @@ export default function Box({ slug, coverImage, title, categories, excerpt }) {
             />
           </div>
         </Link>
+        <div className="card__content">
+          <Category categories={categories} />
+          <Link href={"/" + slug} passHref>
+            <a>
+              <h3 className="heading">{title}</h3>
+            </a>
+          </Link>
+          <span className="excerpt">{excerpt}</span>
+        </div>
       </div>
-      <div className="box__content">
-        <Category categories={categories} />
-        <Link href={"/" + slug} passHref>
-          <a>
-            <h3 className="heading">{title}</h3>
-          </a>
-        </Link>
-        <span className="excerpt">{excerpt}</span>
-      </div>
+      <div className="box__card back"></div>
     </div>
   );
 }

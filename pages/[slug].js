@@ -9,23 +9,23 @@ export default function Detail({ post }) {
   return (
     <>
       <Head>
-        <title>{siteName} | {post.title} </title>
+        <title>
+          {siteName} | {post.title}
+        </title>
       </Head>
-      <div className="detail__image">
-        <div className="back1"/>
-        <div className="back2"/>
-        <div className="real">
-          <Image
-            src={post.coverImage}
-            layout="fill"
-            className="image"
-            alt={post.coverImage}
-          />
-        </div>
-      </div>
       <main className="detail">
-        <h1 className="detail__title">{post.title}</h1>
-        <Category categories={post.categories} />
+        <div className="detail__box">
+          <div className="detail__image">
+            <Image
+              src={post.coverImage}
+              layout="fill"
+              className="image"
+              alt={post.coverImage}
+            />
+          </div>
+          <h1 className="detail__title">{post.title}</h1>
+          <Category categories={post.categories} />
+        </div>
         <article className="detail__article">
           <div
             className="inner"
