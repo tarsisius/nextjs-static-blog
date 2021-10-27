@@ -26,7 +26,7 @@ export default function Box({ slug, coverImage, title, categories, excerpt }) {
           <span className="excerpt">{excerpt}</span>
         </div>
       </div>
-      <div className="box__card back"></div>
+      {/* <div className="box__card back"></div> */}
     </div>
   );
 }

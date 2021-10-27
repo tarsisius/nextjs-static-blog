@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=Inconsolata&display=swap");
 
 :root {
-  --text: #4a4a4a;
+  --text: #423e37;
   --primary: rgb(29, 184, 29);
-  --background: #ffff;
+  --background: #efeefb;
+  --background-box: #ffff;
   --button-background: rgba(0, 0, 0, 0.04);
   --button-background-hover: rgba(0, 0, 0, 0.1);
 }
@@ -131,7 +132,7 @@ header {
   grid-template-columns: repeat(auto-fill, minmax(14em, 1fr));
   align-items: start;
   justify-items: center;
-  grid-gap: 4em;
+  grid-gap: 3em;
   padding: 2em 0;
 }
 
@@ -143,36 +144,28 @@ header {
 
 .box {
   position: relative;
-  height: 100%;
-  width: 100%;
-}
-
-.box:hover {
-  transform: translateY(-2px);
-}
-.box__card.back {
-  position: absolute;
-  top: 0.5em;
-  right: -0.5em;
-  z-index: 0;
-}
-.box__card {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
   transition: all 0.3s ease;
   margin-bottom: 1em;
-  background-color: #edebd7;
-  border: 1px solid #423e37;
-  padding: 0.5em;
-  z-index: 1;
-  position: relative;
+  background-color: var(--background-box);
+  box-shadow: -1px -1px 15px 0 rgb(0 0 0 / 3%);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 80ms ease-in-out;
+  animation: fade-in 0.4s cubic-bezier(0.75, -0.5, 0, 1.75) 100ms
+    backwards;
 }
-.box__card .category__component {
+
+.box:hover {
+  transform: translateY(-2px);
+}
+.box .category__component {
   margin: 1em 0 0.5em 0;
 }
-.box__card .card__image {
+.box .card__image {
   position: relative;
 }
 
@@ -192,7 +185,7 @@ header {
 
 .card__content {
   color: var(--text);
-  padding: 0 0.5em;
+  padding: 0 1em;
   height: 100%;
 }
 .card__content a .heading {
@@ -221,7 +214,17 @@ header {
   line-height: 1.6;
   overflow: hidden;
 }
+@keyframes fade-in {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 /*
  * 
  * Category
@@ -238,7 +241,7 @@ header {
 .category {
   display: inline-flex;
   line-height: 1.4;
-  font-weight: 600;
+  font-weight: 400;
   margin-right: 0.5em;
   color: var(--primary);
   cursor: pointer;
@@ -296,13 +299,16 @@ header {
 
 .detail {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
-.detail__box {
-  background-color: #edebd7;
-  border: 1px solid #423e37;
-  padding: 0.5em;
-  z-index: 1;
-  position: relative;
+.detail__card {
+  background-color: var(--background-box);
+  box-shadow: 0 40px 34px -40px rgb(0 0 0 / 32%);
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 .detail__image {
   aspect-ratio: 5/3;
@@ -324,12 +330,12 @@ header {
   position: relative !important;
   height: unset !important;
 }
+.detail__article {
+  padding: 1em;
+}
 .detail__title {
   font-size: 2em;
   margin-bottom: 1em;
-}
-.detail__article {
-  padding: 1em .5em;
 }
 .detail__article .inner {
   color: var(--text);

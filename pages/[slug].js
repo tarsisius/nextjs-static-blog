@@ -14,7 +14,7 @@ export default function Detail({ post }) {
         </title>
       </Head>
       <main className="detail">
-        <div className="detail__box">
+        <div className="detail__card">
           <div className="detail__image">
             <Image
               src={post.coverImage}
@@ -23,15 +23,16 @@ export default function Detail({ post }) {
               alt={post.coverImage}
             />
           </div>
-          <h1 className="detail__title">{post.title}</h1>
-          <Category categories={post.categories} />
+          <article className="detail__article">
+            <h1 className="detail__title">{post.title}</h1>
+            <Category categories={post.categories} />
+            <div
+              className="inner"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </article>
         </div>
-        <article className="detail__article">
-          <div
-            className="inner"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-        </article>
+        {/* <div className="detail__card back"/> */}
       </main>
     </>
   );
