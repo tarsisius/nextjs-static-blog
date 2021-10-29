@@ -26,9 +26,9 @@ export default function Pagination({ currentPage, totalPages, category }) {
   };
   return (
     <div className="pagination">
-      <ul className="pagination-inner">
+      <ul className="inner">
         {!isFirst && (
-          <li className="pagination-button">
+          <li className="button">
             <Link href={currentPage === 2 ? prevFirst : prevPage} passHref>
               <a className="head">Previous</a>
             </Link>
@@ -36,7 +36,7 @@ export default function Pagination({ currentPage, totalPages, category }) {
         )}
         {Array.from({ length: totalPages }, (_, i) => (
           <li
-            className={"pagination-button" + classButton(i) + " number"}
+            className={"button" + classButton(i) + " number"}
             key={i}
           >
             <Link href={numPages(i)} passHref>
@@ -45,7 +45,7 @@ export default function Pagination({ currentPage, totalPages, category }) {
           </li>
         ))}
         {!isLast && (
-          <li className="pagination-button">
+          <li className="button">
             <Link href={nextPage} passHref>
               <a className="head">Next</a>
             </Link>

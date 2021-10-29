@@ -177,6 +177,7 @@ header {
   position: relative !important;
   height: unset !important;
   background: #333;
+  cursor: pointer;
 }
 
 .card__content {
@@ -253,29 +254,27 @@ header {
   display: flex;
 }
 
-.pagination .pagination-inner {
+.pagination .inner {
   display: inline-flex;
   margin: auto;
   padding: 0;
 }
 
-.pagination .pagination-inner .pagination-button,
-.pagination .pagination-inner .pagination-button_active {
+.pagination .inner .button,
+.pagination .inner .button_active {
   display: inline-flex;
   background-color: var(--background-box);
-  box-shadow: -1px -1px 15px 0 rgb(0 0 0 / 3%);
   margin-right: 0.5em;
-  border-radius: 5px;
 }
 
-.pagination .pagination-inner .pagination-button a {
+.pagination .inner .button a {
   padding: 0.5em 1em;
   background-color: var(--card);
   color: var(--text);
   transition: background-color 0.25s ease-in-out;
 }
 
-.pagination .pagination-inner .pagination-button_active a {
+.pagination .inner .button_active a {
   padding: 0.5em 1em;
   background-color: var(--card);
   color: var(--primary);
@@ -283,11 +282,11 @@ header {
   transition: background-color 0.2s ease-in-out;
 }
 
-.pagination .pagination-inner .pagination-button a:hover,
-.pagination .pagination-inner .pagination-button_active a:hover {
+.pagination .inner .button a:hover,
+.pagination .inner .button_active a:hover {
   color: var(--primary);
 }
-.pagination .pagination-inner .pagination-button .head {
+.pagination .inner .button .head {
   font-weight: 600;
 }
 
