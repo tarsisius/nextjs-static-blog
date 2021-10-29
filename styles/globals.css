@@ -90,7 +90,7 @@ h4 {
  * 
 */
 .container {
-  max-width: 860px;
+  max-width: 720px;
   margin: auto;
 }
 
@@ -106,15 +106,11 @@ header {
 }
 .header__logo {
   display: flex;
-  justify-content: center;
-  font-size: 3em;
+  font-size: 4em;
   font-weight: 700;
 }
 .header__logo .logo {
-  padding: 0.25em 0.5em;
   cursor: pointer;
-  background: var(--background-box);
-  box-shadow: -1px -1px 15px 0 rgb(0 0 0 / 3%);
   border-radius: 10px;
 }
 .header__desc {
@@ -169,13 +165,13 @@ header {
   position: relative;
 }
 
-.card__image div {
+.card__image span {
   position: unset !important;
   aspect-ratio: 4.5/3;
   width: 100%;
 }
 
-.card__image div .image {
+.card__image span .image {
   object-fit: cover;
   width: 100% !important;
   position: relative !important;
@@ -320,11 +316,11 @@ header {
   justify-content: center;
 }
 
-.detail__image div {
+.detail__image span {
   position: unset !important;
 }
 
-.detail__image div .image {
+.detail__image span .image {
   object-fit: cover;
   width: 100% !important;
   position: relative !important;
@@ -368,6 +364,10 @@ footer {
 @media only screen and (max-width: 920px) {
   body {
     font-size: 98%;
+  }
+  header {
+    margin: 2em 1em 4em 1em;
+    width: 100%;
   }
   .container {
     padding: 0 0.5em;
