@@ -14,7 +14,6 @@ export default function Detail({ post }) {
         </title>
       </Head>
       <main className="detail">
-        <div className="detail__card">
           <div className="detail__image">
             <Image
               src={post.coverImage}
@@ -31,8 +30,6 @@ export default function Detail({ post }) {
               dangerouslySetInnerHTML={{ __html: post.html }}
             />
           </article>
-        </div>
-        {/* <div className="detail__card back"/> */}
       </main>
     </>
   );
