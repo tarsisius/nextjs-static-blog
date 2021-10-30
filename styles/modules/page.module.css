@@ -29,6 +29,7 @@
   border: 1px solid #cfe6e6;
   border-radius: 4px;
   overflow: hidden;
+  box-shadow: 0 4px 4px rgb(20 40 50 / 5%), 0 1px 10px rgb(20 40 50 / 5%), 0 20px 30px rgb(20 40 50 / 8%);
 }
 
 .detail__image span {
