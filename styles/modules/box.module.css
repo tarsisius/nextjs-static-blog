@@ -50,13 +50,13 @@
 .heading {
   cursor: pointer;
   line-height: 1.6;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   font-weight: 600;
-  margin-top: 0.25em;
+  margin-bottom: 0.8em ;
 }
 
 .excerpt {

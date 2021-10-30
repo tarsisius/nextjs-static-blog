@@ -3,7 +3,7 @@ import Link from "next/link";
 import Category from "@/components/Category";
 import styles from "@/styles/modules/box.module.css";
 
-export default function Box({ slug, coverImage, title, categories, excerpt }) {
+export default function Box({ slug, coverImage, title, categories }) {
   return (
     <div className={styles.box}>
       <Link href={"/" + slug} passHref>
@@ -19,10 +19,9 @@ export default function Box({ slug, coverImage, title, categories, excerpt }) {
       <div className={styles.content}>
         <Link href={"/" + slug} passHref>
           <a>
-            <h2 className={styles.heading}>{title}</h2>
+            <h3 className={styles.heading}>{title}</h3>
           </a>
         </Link>
-        <span className={styles.excerpt}>{excerpt}</span>
         <Category categories={categories} />
       </div>
     </div>
