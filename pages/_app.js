@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
-import Layout from "@/components/Layout";
-import "@/styles/globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import "@/styles/styles.css";
 import "@/styles/nprogress.css";
 import "@/styles/syntax.css";
 
@@ -31,9 +32,11 @@ function MyApp({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false });
 
   return (
-    <Layout>
+    <>
+      <Header />
       <Component {...pageProps} />
-    </Layout>
+      <Footer />
+    </>
   );
 }
 

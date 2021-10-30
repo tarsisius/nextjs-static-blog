@@ -1,37 +1,32 @@
-import Head from "next/head";
 import Image from "next/image";
 import Category from "@/components/Category";
+import Layout from "@/components/Layout";
 import { getSlugs, getBySlug } from "@/libs/markdown";
-import { siteName } from "@/libs/config";
+import styles from "@/styles/modules/page.module.css";
 
 export default function Detail({ post }) {
   if (!post) return null;
   return (
-    <>
-      <Head>
-        <title>
-          {siteName} | {post.title}
-        </title>
-      </Head>
-      <main className="detail">
-          <div className="detail__image">
-            <Image
-              src={post.coverImage}
-              layout="fill"
-              className="image"
-              alt={post.coverImage}
-            />
-          </div>
-          <article className="detail__article">
-            <h1 className="detail__title">{post.title}</h1>
-            <Category categories={post.categories} />
-            <div
-              className="inner"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </article>
+    <Layout title={post.title}>
+      <main className={styles.detail}>
+        <div className={styles.detail__image}>
+          <Image
+            src={post.coverImage}
+            layout="fill"
+            className={styles.image}
+            alt={post.coverImage}
+          />
+        </div>
+        <article className={styles.detail__article}>
+          <h1 className={styles.detail__title}>{post.title}</h1>
+          <div
+            className={styles.inner}
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+          <Category categories={post.categories} />
+        </article>
       </main>
-    </>
+    </Layout>
   );
 }
 

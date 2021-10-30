@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "@/styles/modules/pagination.module.css";
 
 export default function Pagination({ currentPage, totalPages, category }) {
   if (totalPages === 1) return null;
@@ -22,32 +23,29 @@ export default function Pagination({ currentPage, totalPages, category }) {
   };
 
   const classButton = (i) => {
-    return i + 1 === currentPage ? "_active" : "";
+    return i + 1 === currentPage ? styles.button_active : styles.button;
   };
   return (
-    <div className="pagination">
-      <ul className="inner">
+    <div className={styles.pagination}>
+      <ul className={styles.inner}>
         {!isFirst && (
-          <li className="button">
+          <li className={styles.button}>
             <Link href={currentPage === 2 ? prevFirst : prevPage} passHref>
-              <a className="head">Previous</a>
+              <a className={styles.head}>Previous</a>
             </Link>
           </li>
         )}
         {Array.from({ length: totalPages }, (_, i) => (
-          <li
-            className={"button" + classButton(i) + " number"}
-            key={i}
-          >
+          <li className={classButton(i)} key={i}>
             <Link href={numPages(i)} passHref>
               <a>{i + 1}</a>
             </Link>
           </li>
         ))}
         {!isLast && (
-          <li className="button">
+          <li className={styles.button}>
             <Link href={nextPage} passHref>
-              <a className="head">Next</a>
+              <a className={styles.head}>Next</a>
             </Link>
           </li>
         )}

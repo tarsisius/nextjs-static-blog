@@ -1,22 +1,20 @@
-import Head from "next/head";
 import Box from "@/components/Box";
 import Pagination from "@/components/Pagination";
 import { getPosts } from "@/libs/markdown";
-import { siteName, perPage } from "@/libs/config";
+import { perPage } from "@/libs/config";
+import Layout from "@/components/Layout";
+import styles from "@/styles/modules/page.module.css";
 
 export default function Page({ posts, totalPages, currentPage }) {
   return (
-    <>
-      <Head>
-        <title>{siteName}</title>
-      </Head>
-      <main className="post-list">
+    <Layout>
+      <main className={styles.post__list}>
         {posts.map((post, i) => (
           <Box key={i} {...post} />
         ))}
       </main>
       <Pagination currentPage={currentPage} totalPages={totalPages} />
-    </>
+    </Layout>
   );
 }
 

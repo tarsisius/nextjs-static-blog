@@ -1,8 +1,10 @@
+import styles from "@/styles/modules/footer.module.css";
+
 export default function Footer() {
   return (
-    <footer>
-      <div className="container">
-          <a>© 2021</a>
+    <footer className={styles.footer}>
+      <div className={styles.real}>
+        <a>© 2021</a>
       </div>
     </footer>
   );
