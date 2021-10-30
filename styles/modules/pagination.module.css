@@ -1,0 +1,45 @@
+/*
+ * 
+ * Pagination
+ * 
+*/
+.pagination {
+  padding-top: 2em;
+  display: flex;
+}
+
+.inner {
+  display: inline-flex;
+  margin: auto;
+  padding: 0;
+}
+
+.button,
+.button_active {
+  display: inline-flex;
+  background-color: var(--background-box);
+  margin-right: 0.5em;
+}
+
+.button a {
+  padding: 0.5em 1em;
+  background-color: var(--card);
+  color: var(--text);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.button_active a {
+  padding: 0.5em 1em;
+  background-color: var(--card);
+  color: var(--primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.button a:hover,
+.button_active a:hover {
+  color: var(--primary);
+}
+.head {
+  font-weight: 600;
+}

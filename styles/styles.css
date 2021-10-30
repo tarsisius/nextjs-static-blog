@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=Inconsolata&display=swap");
+
+:root {
+  --text: #423e37;
+  --primary: rgb(29, 184, 29);
+  --background: #fff;
+  --background-box: #ffff;
+  --button-background: rgba(0, 0, 0, 0.04);
+  --button-background-hover: rgba(0, 0, 0, 0.1);
+  --max-width: 768px;
+}
+
+html,
+body {
+  color: var(--text);
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+  background-color: var(--background);
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+pre {
+  min-width: 100%;
+  padding: 2em;
+  margin: 2em 0;
+  overflow-x: auto;
+  line-height: 2;
+  color: #abb2bf;
+  background: #0d1117;
+  border-radius: 4px;
+}
+
+code {
+  font-family: "Inconsolata", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+li {
+  display: block;
+}
+
+input,
+button {
+  font-family: "Lexend", sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 4px 12px;
+  line-height: 1.8;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.17em;
+}
+h4 {
+  font-size: 1em;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(80px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  body {
+    font-size: 98%;
+  }
+}
+@media only screen and (max-width: 680px) {
+  body {
+    font-size: 95%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  body {
+    font-size: 93%;
+  }
+}
