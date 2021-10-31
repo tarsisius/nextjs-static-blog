@@ -5,6 +5,7 @@
 */
 .category {
   display: flex;
+  margin-top: 0.5em;
 }
 .child {
   display: inline-flex;
