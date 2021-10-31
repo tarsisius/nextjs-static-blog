@@ -7,16 +7,13 @@
 .box {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
   width: 100%;
   transition: all 0.3s ease;
-  background-color: var(--background-box);
-  border: 1px solid #cfe6e6;
-  border-radius: 4px;
-  overflow: hidden;
   transition: transform 80ms ease-in-out;
   animation: fade-in 0.4s cubic-bezier(0.75, -0.5, 0, 1.75) 100ms backwards;
+  margin-bottom: 4em;
 }
 
 .box:hover {
@@ -24,6 +21,7 @@
 } 
 
 .image {
+  width: 30%;
   position: relative;
 }
 
@@ -31,6 +29,10 @@
   position: unset !important;
   aspect-ratio: 5/3;
   width: 100%;
+  border: 1px solid #cfe6e6;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px rgb(20 40 50 / 5%), 0 1px 10px rgb(20 40 50 / 5%), 0 20px 30px rgb(20 40 50 / 8%);
 }
 
  .real {
@@ -44,8 +46,9 @@
 
 .content {
   color: var(--text);
-  padding: 1.5em;
+  padding: 0 2em;
   height: 100%;
+  width: 70%;
 }
 .heading {
   cursor: pointer;
@@ -56,7 +59,6 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   font-weight: 600;
-  margin-bottom: 0.8em ;
 }
 
 .excerpt {
@@ -68,4 +70,16 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
+}
+@media only screen and (max-width: 480px) {
+  .box{
+    flex-direction: column;
+  }
+  .image,.content {
+    width: 100%;
+  }
+  .content{
+    padding: 1em;
+    margin-top: 1em;
+  }
 }
