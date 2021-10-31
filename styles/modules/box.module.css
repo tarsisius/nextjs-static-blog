@@ -32,7 +32,6 @@
 .image span {
   position: unset !important;
   aspect-ratio: 5/3;
-  width: 100%;
 }
 .real {
   object-fit: cover;
