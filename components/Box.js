@@ -3,15 +3,15 @@ import Link from "next/link";
 import Category from "@/components/Category";
 import styles from "@/styles/modules/box.module.css";
 
-export default function Box({ slug, coverImage, title, categories,excerpt }) {
+export default function Box({ thumbnail, slug, title, categories, excerpt }) {
   return (
     <div className={styles.box}>
       <Link href={"/" + slug} passHref>
         <div className={styles.image}>
           <Image
-            src={coverImage}
+            src={thumbnail}
             className={styles.real}
-            alt={coverImage}
+            alt={thumbnail}
             layout="fill"
           />
         </div>

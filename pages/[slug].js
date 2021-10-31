@@ -11,10 +11,10 @@ export default function Detail({ post }) {
       <main className={styles.detail}>
         <div className={styles.detail__image}>
           <Image
-            src={post.coverImage}
+            src={post.thumbnail}
             layout="fill"
             className={styles.image}
-            alt={post.coverImage}
+            alt={post.thumbnail}
           />
         </div>
         <article className={styles.detail__article}>

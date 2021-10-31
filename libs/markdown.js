@@ -3,17 +3,19 @@ import path from "path";
 import matter from "gray-matter";
 import marked from "marked";
 import prism from "prismjs";
-import { dir } from "@/libs/config";
+import { folder, dir } from "@/libs/config";
 
 export function getPosts() {
   const files = fs.readdirSync(dir);
   const posts = files.map((file) => {
-    const slug = file.replace(/\.md$/, "");
-    const post = path.join(dir, file);
+    const thumbnail = `/${folder}/${file}/thumbnail.jpg`
+    const post = path.join(dir, file, "content.md");
     const content = fs.readFileSync(post, "utf8");
     const result = matter(content);
+    
     return {
-      slug,
+      thumbnail,
+      slug: file,
       ...result.data,
     };
   });
@@ -26,7 +28,7 @@ export function getSlugs() {
   const slug = files.map((file) => {
     return {
       params: {
-        slug: file.replace(/\.md$/, ""),
+        slug: file,
       },
     };
   });
@@ -34,7 +36,8 @@ export function getSlugs() {
 }
 
 export function getBySlug(slug) {
-  const post = path.join(dir, `${slug}.md`);
+  const thumbnail = `/${folder}/${slug}/thumbnail.jpg`
+  const post = path.join(dir, slug, "content.md");
   const content = fs.readFileSync(post, "utf8");
   const result = matter(content);
 
@@ -48,6 +51,7 @@ export function getBySlug(slug) {
 
   const html = marked(result.content);
   return {
+    thumbnail,
     slug,
     html,
     ...result.data,
