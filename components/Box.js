@@ -1,28 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import Category from "@/components/Category";
-import styles from "@/styles/modules/box.module.css";
 
-export default function Box({ thumbnail, slug, title, categories, excerpt }) {
+export default function Box({ coverImage, slug, title, categories, excerpt }) {
   return (
-    <div className={styles.box}>
+    <div className="box">
       <Link href={"/" + slug} passHref>
-        <div className={styles.image}>
+        <div className="box_image">
           <Image
-            src={thumbnail}
-            className={styles.real}
-            alt={thumbnail}
+            src={coverImage}
+            alt={coverImage}
             layout="fill"
           />
         </div>
       </Link>
-      <div className={styles.content}>
+      <div className="box_content">
         <Link href={"/" + slug} passHref>
           <a>
-            <h2 className={styles.heading}>{title}</h2>
+            <h2 className="title">{title}</h2>
           </a>
         </Link>
-        <p className={styles.excerpt}>{excerpt}</p>
+        <p className="excerpt">{excerpt}</p>
         <Category categories={categories} />
       </div>
     </div>

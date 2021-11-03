@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { siteName } from "@/libs/config";
-import styles from "@/styles/modules/header.module.css";
 
 export default function Header() {
   return (
-    <header className={styles.header}>
+    <header className="header">
       <Link href="/" passHref>
-        <div className={styles.logo}>
-          <div className={styles.real}>{siteName}</div>
+        <div className="header_logo">
+          <span>{siteName}</span>
         </div>
       </Link>
     </header>

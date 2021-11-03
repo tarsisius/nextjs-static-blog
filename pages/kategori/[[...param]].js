@@ -1,15 +1,14 @@
 import Box from "@/components/Box";
 import Pagination from "@/components/Pagination";
-import { getCategories, getByCategory } from "@/libs/markdown";
+import { getCategories, getByCategory } from "@/libs/data";
 import { perPage } from "@/libs/config";
 import Layout from "@/components/Layout";
-import styles from "@/styles/modules/page.module.css";
 
 export default function Category({ posts, category, totalPages, currentPage }) {
   return (
     <Layout title={category}>
-      <a className={styles.identation}>#{category}</a>
-      <main className={styles.post__list}>
+      <a className="identation">#{category}</a>
+      <main className="post__list">
         {posts.map((post, i) => (
           <Box key={i} {...post} />
         ))}

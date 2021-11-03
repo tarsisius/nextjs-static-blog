@@ -1,28 +1,28 @@
 import Image from "next/image";
 import Category from "@/components/Category";
 import Layout from "@/components/Layout";
-import { getSlugs, getBySlug } from "@/libs/markdown";
-import styles from "@/styles/modules/page.module.css";
+import { MDXRemote } from "next-mdx-remote";
+import { getSlugs, getBySlug } from "@/libs/data";
+import Rendered from "@/components/Rendered";
 
 export default function Detail({ post }) {
   if (!post) return null;
   return (
     <Layout title={post.title}>
-      <main className={styles.detail}>
-        <div className={styles.detail__image}>
+      <main className="detail">
+        <div className="detail_image">
           <Image
-            src={post.thumbnail}
+            src={post.coverImage}
             layout="fill"
-            className={styles.image}
-            alt={post.thumbnail}
+            alt={post.coverImage}
+            priority="false"
           />
         </div>
-        <article className={styles.detail__article}>
-          <h1 className={styles.detail__title}>{post.title}</h1>
-          <div
-            className={styles.inner}
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
+        <article className="detail_article">
+          <h1 className="title">{post.title}</h1>
+          <span className="inner">
+            <MDXRemote {...post.html} components={Rendered} />
+          </span>
           <Category categories={post.categories} />
         </article>
       </main>
@@ -40,7 +40,7 @@ export function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      post: getBySlug(params.slug),
+      post: await getBySlug(params.slug),
     },
   };
 }
