@@ -15,7 +15,7 @@ export default function Box({
     <div className="box">
       <Link href={"/" + slug} passHref>
         <a>
-          <img className="box_image" src={coverImage} />
+          <img className="box_image" src={coverImage} alt="Thumbnail" />
         </a>
       </Link>
       <div className="box_content">
