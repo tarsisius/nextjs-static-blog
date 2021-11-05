@@ -7,7 +7,7 @@ import { perPage } from "@/libs/config";
 export default function Page({ posts, totalPages, currentPage }) {
   return (
     <Layout>
-      <main className="post_list">
+      <main className="list">
         {posts.map((post, i) => (
           <Box key={i} {...post} />
         ))}

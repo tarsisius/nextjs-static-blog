@@ -1,30 +1,23 @@
-import Image from "next/image";
 import Category from "@/components/Category";
 import Layout from "@/components/Layout";
-import { MDXRemote } from "next-mdx-remote";
 import { getSlugs, getBySlug } from "@/libs/data";
-import Rendered from "@/components/Rendered";
+import { formatDate } from "@/libs/format";
 
 export default function Detail({ post }) {
   if (!post) return null;
   return (
     <Layout title={post.title}>
       <main className="detail">
-        <div className="detail_image">
-          <Image
-            src={post.coverImage}
-            layout="fill"
-            alt={post.coverImage}
-            priority="false"
-          />
-        </div>
-        <article className="detail_article">
-          <h1 className="title">{post.title}</h1>
-          <span className="inner">
-            <MDXRemote {...post.html} components={Rendered} />
-          </span>
+        <img className="detail_image" src={post.coverImage} />
+        <h1 className="detail_title">{post.title}</h1>
+        <span className="detail_info">
+          {formatDate(post.date)} | {post.author} |{" "}
           <Category categories={post.categories} />
-        </article>
+        </span>
+        <div
+          className="detail_inner"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </main>
     </Layout>
   );
@@ -37,10 +30,10 @@ export function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export function getStaticProps({ params }) {
   return {
     props: {
-      post: await getBySlug(params.slug),
+      post: getBySlug(params.slug),
     },
   };
 }

@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan React Js
-date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan React Js
+title: Cara Membuat Web dengan Svelte Js
+date: '2021-01-13'
+excerpt: Panduan bagaimana cara untuk membuat web dengan Svelte Js
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,svelte]
 coverImage: /_posts/thumbnail.jpg
 ---
 

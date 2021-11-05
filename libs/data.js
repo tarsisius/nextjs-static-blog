@@ -1,78 +1,57 @@
 import fs from "fs";
 import path from "path";
+import prism from "prismjs";
 import matter from "gray-matter";
-import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug";
-import rehypeHighlight from "rehype-highlight";
-import { serialize } from "next-mdx-remote/serialize";
+import marked, { setOptions } from "marked";
 import { dir } from "@/libs/config";
 
 export function getPosts() {
   return fs
     .readdirSync(dir)
     .map((file) => {
-      const slug = file.replace(/\.mdx$/, "");
+      const slug = file.replace(/\.md$/, "");
       const post = path.join(dir, file);
       const source = fs.readFileSync(post, "utf8");
-      const result = matter(source);
-
+      const { data } = matter(source);
       return {
         slug,
-        ...result.data,
+        ...data,
       };
     })
     .sort((a, b) => (a.date > b.date ? "-1" : "1"));
 }
 
 export function getSlugs() {
-  const files = fs.readdirSync(dir);
-  const slug = files.map((file) => {
+  return fs.readdirSync(dir).map((file) => {
+    const slug = file.replace(/\.md$/, "");
     return {
       params: {
-        slug: file.replace(/\.mdx$/, ""),
+        slug,
       },
     };
   });
-  return slug;
 }
 
-export async function getBySlug(slug) {
-  const post = path.join(dir, `${slug}.mdx`);
+export function getBySlug(slug) {
+  const post = path.join(dir, `${slug}.md`);
   const source = fs.readFileSync(post, "utf8");
   const { data, content } = matter(source);
-
-  const html = await serialize(content, {
-    mdxOptions: {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypeSlug, rehypeHighlight],
+  setOptions({
+    highlight: (code, lang) => {
+      return prism.languages[lang]
+      ? prism.highlight(code, prism.languages[lang], lang)
+      : code;
     },
+    gfm: true,
   });
+  
+  const html = marked(content);
   return {
     slug,
     html,
     ...data,
   };
 }
-// export function getBySlug(slug) {
-//   const post = path.join(dir, `${slug}.md`);
-//   const source = fs.readFileSync(post, "utf8");
-//   const result = matter(source);
-
-//   marked.setOptions({
-//     highlight: (code, lang) => {
-//       return prism.languages[lang]
-//         ? prism.highlight(code, prism.languages[lang], lang)
-//         : code;
-//     },
-//   });
-
-//   const html = marked(result.content);
-//   return {
-//     slug,
-//     html,
-//     ...result.data,
-//   };
-// }
 
 export function getCategories() {
   const posts = getPosts();

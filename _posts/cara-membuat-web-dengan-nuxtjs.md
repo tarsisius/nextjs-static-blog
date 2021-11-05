@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan PHP
-date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan PHP
+title: Cara Membuat Web dengan Nuxt JS
+date: '2021-01-16'
+excerpt: Panduan bagaimana cara untuk membuat web dengan nuxt js
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,nuxtjs]
 coverImage: /_posts/thumbnail.jpg
 ---
 

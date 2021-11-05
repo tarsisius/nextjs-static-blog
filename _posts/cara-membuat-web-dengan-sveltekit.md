@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan Vue Js
-date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan Vue Js
+title: Cara Membuat Web dengan Sveltekit
+date: '2021-01-12'
+excerpt: Panduan bagaimana cara untuk membuat web dengan Sveltekit
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,sveltekit]
 coverImage: /_posts/thumbnail.jpg
 ---
 

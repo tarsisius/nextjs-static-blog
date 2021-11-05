@@ -1,14 +1,12 @@
 ---
-title: Cara Membuat Web dengan Meteor
-date: "2021-01-11"
-excerpt: Panduan bagaimana cara untuk membuat web dengan meteor
+title: Cara Membuat Web dengan Angular
+date: "2021-01-19"
+excerpt: Panduan bagaimana cara untuk membuat web dengan angular
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,angular]
 coverImage: /_posts/thumbnail.jpg
 ---
-
-<Image processedImage={`/_posts/thumbnail.jpg`} />
 
 > Hello World
 
@@ -25,7 +23,7 @@ Sebagai pengenalan, blog ini dibangun dengan menggunakan beberapa teknologi yang
 
 Bentar, mau coba test `kodingan` dulu
 
-```jsx
+```js
 const Foo = () => {
   return (
     <div>
@@ -42,9 +40,6 @@ Terima kasih sudah menyempatkan untuk mengunjungi halaman ini, semoga hari-harim
 Terima kasih sudah menyempatkan untuk mengunjungi halaman ini, semoga hari-harimu pasti menyenangkan!
 Terima kasih sudah menyempatkan untuk mengunjungi halaman ini, semoga hari-harimu pasti menyenangkan!
 Terima kasih sudah menyempatkan untuk mengunjungi halaman ini, semoga hari-harimu pasti menyenangkan!
-
-<Image processedImage={`/_posts/thumbnail.jpg`} />
-
 Terima kasih sudah menyempatkan untuk mengunjungi halaman ini, semoga hari-harimu pasti menyenangkan!
 Terima kasih sudah menyempatkan untuk mengunjungi halaman ini, semoga hari-harimu pasti menyenangkan!
 Terima kasih sudah menyempatkan untuk mengunjungi halaman ini, semoga hari-harimu pasti menyenangkan!

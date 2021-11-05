@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan Sveltekit
-date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan Sveltekit
+title: Cara Membuat Web dengan Next JS
+date: '2021-01-17'
+excerpt: Panduan bagaimana cara untuk membuat web dengan next js
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,nextjs]
 coverImage: /_posts/thumbnail.jpg
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan Next JS
-date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan next js
+title: Cara Membuat Web dengan React Js
+date: '2021-01-14'
+excerpt: Panduan bagaimana cara untuk membuat web dengan React Js
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,reactjs]
 coverImage: /_posts/thumbnail.jpg
 ---
 

@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan Svelte Js
-date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan Svelte Js
+title: Cara Membuat Web dengan Meteor
+date: '2021-01-18'
+excerpt: Panduan bagaimana cara untuk membuat web dengan meteor
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,meteor]
 coverImage: /_posts/thumbnail.jpg
 ---
 
@@ -29,3 +29,13 @@ Google analytics helps measuring the visitors and their engagement on our websit
 - To check core web vital report in Google Analytics open Events
 - Filer events category for the value "Web Vitals" 
 - You can find all web vital reading in the GA here. 
+
+
+![Thumbnail](/_posts/thumbnail.jpg)
+
+
+| koooooooooon | ciiiiiii | kee | ti | nggalan |
+|--------------|----------|-----|----|---------|
+| 1            | 2        | 3   | 4  | 5       |
+| 6            | 7        | 8   | 9  | 10      |
+| 11           | 12       | 13  | 14 | 15      |

@@ -8,7 +8,7 @@ export default function Category({ posts, category, totalPages, currentPage }) {
   return (
     <Layout title={category}>
       <a className="identation">#{category}</a>
-      <main className="post__list">
+      <main className="list">
         {posts.map((post, i) => (
           <Box key={i} {...post} />
         ))}

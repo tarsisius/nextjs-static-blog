@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan Meteor
-date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan meteor
+title: Cara Membuat Web dengan PHP
+date: '2021-01-15'
+excerpt: Panduan bagaimana cara untuk membuat web dengan PHP
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,php]
 coverImage: /_posts/thumbnail.jpg
 ---
 

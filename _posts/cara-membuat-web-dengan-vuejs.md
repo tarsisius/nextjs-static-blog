@@ -1,10 +1,10 @@
 ---
-title: Cara Membuat Web dengan Nuxt JS
+title: Cara Membuat Web dengan Vue Js
 date: '2021-01-11'
-excerpt: Panduan bagaimana cara untuk membuat web dengan nuxt js
+excerpt: Panduan bagaimana cara untuk membuat web dengan Vue Js
 author: Aryo
 published: true
-categories: [javascript]
+categories: [javascript,vue]
 coverImage: /_posts/thumbnail.jpg
 ---
 

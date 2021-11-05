@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Lexend";
+    src: url("/fonts/Lexend/Lexend-Regular.ttf");
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lexend";
+    src: url("/fonts/Lexend/Lexend-SemiBold.ttf");
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lexend";
+    src: url("/fonts/Lexend/Lexend-Bold.ttf");
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Lexend";
+    src: url("/fonts/Lexend/Lexend-Light.ttf");
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Inconsolata";
+    src: url("/fonts/Inconsolata/Inconsolata-Regular.ttf");
+    font-weight: 400;
+    font-display: swap;
+  }
