@@ -4,11 +4,13 @@ import { siteName } from "@/libs/config";
 export default function Header() {
   return (
     <header className="header">
-      <Link href="/" passHref>
-        <div className="header_logo">
-          <span>{siteName}</span>
-        </div>
-      </Link>
+      <div className="header_container">
+        <Link href="/" passHref>
+          <div className="header_logo">
+            <span>{siteName}</span>
+          </div>
+        </Link>
+      </div>
     </header>
   );
 }

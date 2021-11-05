@@ -13,7 +13,11 @@ export default function Box({
 }) {
   return (
     <div className="box">
-      <img className="box_image" src={coverImage} />
+      <Link href={"/" + slug} passHref>
+        <a>
+          <img className="box_image" src={coverImage} />
+        </a>
+      </Link>
       <div className="box_content">
         <Link href={"/" + slug} passHref>
           <a>
