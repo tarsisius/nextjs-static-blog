@@ -8,7 +8,9 @@ export default function Detail({ post }) {
   return (
     <Layout title={post.title}>
       <main className="detail">
-        <img className="detail_image" src={post.coverImage} />
+        <div className="detail_image_container">
+          <img className="detail_image" src={post.coverImage} />
+        </div>
         <h1 className="detail_title">{post.title}</h1>
         <span className="detail_info">
           {formatDate(post.date)} | {post.author} |{" "}
