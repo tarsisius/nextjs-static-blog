@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Category from "@/components/Category";
 import Layout from "@/components/Layout";
 import { getSlugs, getBySlug } from "@/libs/data";
@@ -8,8 +9,12 @@ export default function Detail({ post }) {
   return (
     <Layout title={post.title}>
       <main className="detail">
-        <div className="detail_image_container">
-          <img className="detail_image" src={post.coverImage} />
+        <div className="detail_image">
+          <Image
+            src={post.coverImage}
+            alt={post.coverImage}
+            layout="fill"
+          />
         </div>
         <h1 className="detail_title">{post.title}</h1>
         <span className="detail_info">

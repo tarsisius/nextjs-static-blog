@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Category from "@/components/Category";
 import { formatDate } from "@/libs/format";
 
@@ -15,8 +16,12 @@ export default function Box({
     <div className="box">
       <Link href={"/" + slug} passHref>
         <a>
-          <div className="box_image_container">
-            <img className="box_image" src={coverImage} alt="Thumbnail" />
+          <div className="box_image">
+            <Image
+              src={coverImage}
+              alt={coverImage}
+              layout="fill"
+            />
           </div>
         </a>
       </Link>
